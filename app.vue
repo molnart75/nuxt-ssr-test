@@ -1,5 +1,5 @@
 <script setup>
-  const { data } = await useFetch('https://hur.webmania.cc/products.json')
+  const { data } = await useFetch('/api/products')
   const products = useState('products', () => data.value.products)
 </script>
 

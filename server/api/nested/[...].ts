@@ -16,8 +16,8 @@ router.delete('/test', defineEventHandler((event) => {
     return 'delete nested route.'
 }))
 
-/* router.get('/test/category', defineEventHandler((event) => {
+router.get('/test/category', defineEventHandler((event) => {
     return 'Category'
-})) */
+}))
 
 export default useBase('/api/nested', router.handler)
