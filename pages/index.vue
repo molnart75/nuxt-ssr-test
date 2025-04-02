@@ -4,12 +4,19 @@
   const products = useState('products')
   const showToast = ref(false)
 
+  const { data: test } = await useFetch('/api/test')
+
   useHead({ title: 'MT Shop' })
 </script>
 
 <template>
+  <section>
+    <div>{{ test.hello }}</div>
+    <div>{{ id }}</div>
+  </section>
   <div>
     <h1>Shop</h1>
+    
     <div id="products">
       <section v-for="product in products">
         <h2>{{ product.name }}</h2>
